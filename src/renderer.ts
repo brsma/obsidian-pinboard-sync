@@ -25,6 +25,7 @@ export class PinRenderer {
 
 		const tags = tagNames.filter((tag) => !!tag)
       		.map((tag) => tag.replace(/\s+/g, "-").toLowerCase())
+			.map((tag) => tag.replace(/\:/g, "-"))
       		.map((tag) => `#${prefix}${tag}`)
       		.join(" ");
 
